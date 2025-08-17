@@ -28,8 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'ckeditor',
-    'ckeditor_uploader',
+    'django_ckeditor_5',
 ]
 
 MIDDLEWARE = [
@@ -111,13 +110,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
+# STATIC_URL = 'static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, STATIC_URL)
 
-MEDIA_URL = 'images/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+# MEDIA_URL = '/images/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
-CKEDITOR_UPLOAD_PATH = 'uploads/'
+# CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+# ESTÁTICOS
+STATIC_URL = '/static/'
+# (Em dev, não precisa de STATIC_ROOT. Se quiser deixar:)
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# MÍDIA (usado pelos uploads do django-ckeditor-5)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# Remova CKEDITOR_UPLOAD_PATH (é do pacote antigo django-ckeditor v4)
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
