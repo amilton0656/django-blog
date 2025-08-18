@@ -7,4 +7,5 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.contato, name='contato'),
+    path('mensagem', views.processa_contato, name='mensagem'),
 ]
