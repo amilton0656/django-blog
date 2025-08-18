@@ -13,7 +13,9 @@ py manage.py runserver
 
 py manage.py collectstatic
 
-py manage.py startapp exemplos
+py manage.py startapp cursos
+py manage.py startapp contato
+py manage.py startapp autenticacao
 
 {% load static %}
 <img src="{% static 'blog/logo.png' %}" alt="">

@@ -29,6 +29,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'django_ckeditor_5',
+    'cursos',
+    'contato',
+    'autenticacao',
 ]
 
 MIDDLEWARE = [
@@ -68,10 +71,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'blog',
-        'USER' : 'postgres',
+        'USER' : 'amilton',
         'PASSWORD' : '310885',
         'HOST': '127.0.0.1',
-        'PORT': '5432'
+        'PORT': '5433'
     }
 }
 

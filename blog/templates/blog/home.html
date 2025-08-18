@@ -37,7 +37,7 @@
                                     </a>
                                     {% endwith %}
                                     <div class="card-body">
-                                        <a href="{% url 'post_details' posts.0.id %}">
+                                        <a href="{% url 'post_details' posts.0.id %}" class="text-decoration-none text-dark">
                                             <h5 class="card-title">{{posts.0.titulo}}</h5>
                                         </a>
                                         <p class="card-text">{{posts.0.resumo|safe}}</p>
@@ -100,14 +100,14 @@
                             <div class="col">
                                 <div class="card">
                                     {% if post.imagem_capa %}
-                                    <a href="{% url 'post_details' post.id %}">
+                                    <a href="{% url 'post_details' post.id %}" class="text-decoration-none text-dark">
                                         <img src="{{ post.imagem_capa.url }}" alt="{{ post.titulo }}" class="img-300">
                                     </a>
                                     {% else %}
                                     <img src="{% static 'blog/images/default.jpg' %}" alt="sem imagem" class="img-300">
                                     {% endif %}
                                     <div class="card-body">
-                                        <a href="{% url 'post_details' post.id %}">
+                                        <a href="{% url 'post_details' post.id %}" class="text-decoration-none text-dark">
                                             <h5 class="card-title">{{ post.titulo|slice:":15"}}...</h5>
                                         </a>
                                         <p class="card-text">{{post.conteudo|safe}}</p>
